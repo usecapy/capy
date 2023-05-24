@@ -3,7 +3,9 @@
 <img src="docs/images/capybara.jpeg">
 <hr>
 
-**✨ Blazingly fast web apps without template, using your favorite Python frameworks.**
+**✨ Blazingly fast web apps without template, using your favorite Python frameworks (like Flask or Django).**
+
+***In closed beta, join source-access waitlist: https://docs.google.com/forms/d/1rck6wvNUfwbMTl8aM9jSb7G5Poh7nQBWnObDX0-yq-Q
 
 </div>
 
@@ -34,7 +36,7 @@ Let's creat an image caption generator that accept an image upload:
 
 &nbsp;
 
-This is all done in one Python file in a Flask project!
+This is all done in one Python file in a Flask project and stop writing templates.
 
 ```python
 from flask import Flask
@@ -72,6 +74,8 @@ def index():
 app.run(host='0.0.0.0', port=81)
 
 ```
+
+BTW, did I tell you Capy also supports mobile and desktop apps? YES! And it isn't not a web port: it translate to mobile native UI components so it feels like mobile!
 
 ## License
 
