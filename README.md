@@ -19,7 +19,7 @@
 
 </div>
 
-## ⚡️ 1. Works on your existing UI frameworks
+## ⚡️ 1. Works on your any screen with your exisitng tools
 
 Capy is *not* a new UI framework for writing apps; it is a Python library for a unified API. Whether you are working with SwiftUI for iOS or XML for Android, start replacing small cmoponents using Capy today!
 
