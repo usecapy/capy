@@ -1,11 +1,21 @@
-<div align="center">
+&nbsp;
 
-<img src="docs/images/capybara.jpeg">
-<hr>
+<div align="center">
+<img src="docs/images/demo.gif" width="550" />
+</div>
+
+&nbsp;
+
+<div align="center">
 
 **✨ Write stunning mobile+desktop apps in Python.**
 
 ***In closed beta, join source-access waitlist: https://docs.google.com/forms/d/1rck6wvNUfwbMTl8aM9jSb7G5Poh7nQBWnObDX0-yq-Q
+
+<img src="docs/images/capybara.jpeg">
+<hr>
+
+
 
 </div>
 
@@ -28,14 +38,6 @@ Capy is powered by platform-native code, and allows you to write super performan
 ## 🫧 Example
 
 Let's creat an image caption generator that accept an image upload:
-
-&nbsp;
-
-<div align="center">
-<img src="docs/images/demo.gif" width="550" />
-</div>
-
-&nbsp;
 
 This is all done in one Python file in a Flask project and stop writing templates.
 
