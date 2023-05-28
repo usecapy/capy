@@ -3,26 +3,27 @@
 <img src="docs/images/capybara.jpeg">
 <hr>
 
-**✨ Blazingly fast web apps without template, using your favorite Python frameworks (like Flask or Django).**
+**✨ Write stunning mobile+desktop apps in Python.**
 
 ***In closed beta, join source-access waitlist: https://docs.google.com/forms/d/1rck6wvNUfwbMTl8aM9jSb7G5Poh7nQBWnObDX0-yq-Q
 
 </div>
 
-## ⚡️ 1. Optimized for SEO
+## ⚡️ 1. Works on your existing UI frameworks
 
-Pages created with Capy loads instantly. Capy reactive but only renders dynamic content when necessary, improving SEO significantly unlike its React counterparts.
+Capy is *not* a new UI framework for writing apps; it is a Python library for a unified API. Whether you are working with SwiftUI for iOS or XML for Android, start replacing small cmoponents using Capy today!
 
+## ⚡️ 2. 30+ stunning, accessible components
 
-## ⚡️ 2. 30+ stunning, accessibile components
-
-Capy offers 30+ commonly used components that are stunning and accessible. Build a complex apps with just a few lines of code
-
+Capy offers 30+ commonly used components that are stunning and accessible. Build a complex apps with fewest lines of code.
 
 ## 🥳 3. Built for developers
 
-Capy is completely hackable. If you can write it with React or HTML, you can build it in Capy in Python.
+Capy is completely hackable and open-source. If you can write it with SwiftUI, UIKit, Jetpack Compose, Fluter, or XML, you can build it in Capy in Python!
 
+## ⚡️ 4. Insanely performant
+
+Capy is powered by platform-native code, and allows you to write super performant apps. For example apps written with Capy is runs significantly faster than React-Native. 
 
 ## 🫧 Example
 
@@ -39,43 +40,30 @@ Let's creat an image caption generator that accept an image upload:
 This is all done in one Python file in a Flask project and stop writing templates.
 
 ```python
-from flask import Flask
-from capy import Capy
+import capy as ca
 
-app = Flask(__name__)
+class MyView(ca.View):
+    @ca.StateObject
+    class State:
+        number = 1
 
-class IndexView:
-  @StateObject
-  class State:
-    selected_image = None
-    image_processed = (False, None)
+        def decrement(self):
+            self.number -= 1
+        def increment(self):
+             self.number += 1
 
-  def applePayPressed(self):
-    # handle payment
-    pass
+    def body(self):
+        return ca.VStack(
+            ca.Heading(f'Count: {self.state.number} '),
+            ca.HStack(
+                ca.Button("lower", bg='red', on_click=self.State.decrement),
+                ca.Button("higher", on_click=self.State.increment)
+            )
+        )
 
-  def body(self):
-    return VStack(
-      ConditionalView(
-        self.State.image_processed[0],
-        true_view=VStack(
-          Image(self.State.selected_image)
-            .frame(300, 300)
-            .corner_radius(20),
-          Text(self.State.image_processed[1])),
-        false_view=FilePicker(type=PHOTOS, 
-                              selected_item = self.State.selected_image)),
-      ApplePayButton(on_click=self.applePayPressed))
-
-# the minimal Flask app
-@app.route('/')
-def index():
-    return IndexView()
-app.run(host='0.0.0.0', port=81)
+view = MyView()
 
 ```
-
-BTW, did I tell you Capy also supports mobile and desktop apps? YES! And it isn't not a web port: it translate to mobile native UI components so it feels like mobile!
 
 ## License
 
